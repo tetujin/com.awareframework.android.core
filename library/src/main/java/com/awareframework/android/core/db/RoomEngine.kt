@@ -184,7 +184,7 @@ class RoomEngine(
                 combinedData ?: continue
 
 //                activeRequest.header(Pair("Content-Type", "application/json"))
-                activeRequest.body("device_id="+ config.deviceId + "&data=" + Gson().toJson(combinedData))
+                activeRequest.body("device_id="+ it.deviceId + "&data=" + Gson().toJson(combinedData))
 
                 // waits for the response
                 val (_, _, result) = activeRequest.responseString()
